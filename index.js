@@ -5,7 +5,7 @@ function darwin (name) {
   return path.join(process.env.HOME, 'Library', 'Application Support', name)
 }
 
-function linux (name) {
+function xdg (name) {
   if (process.env.XDG_CONFIG_HOME) {
     return path.join(process.env.XDG_CONFIG_HOME, name)
   }
@@ -28,7 +28,9 @@ function applicationConfigPath (name) {
 
   switch (os.platform()) {
     case 'darwin': return darwin(name)
-    case 'linux': return linux(name)
+    case 'freebsd':
+    case 'openbsd':
+    case 'linux': return xdg(name)
     case 'win32': return win32(name)
   }
 
