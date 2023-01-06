@@ -1,6 +1,6 @@
 {
   "name": "application-config-path",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Linus Unnebäck <linus@folkdatorn.se>",
   "repository": "LinusU/node-application-config-path",
