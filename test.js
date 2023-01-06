@@ -1,8 +1,9 @@
 /* eslint-env mocha */
 
-var path = require('path')
-var assert = require('assert')
-var applicationConfigPath = require('./')
+import path from 'node:path'
+import assert from 'node:assert'
+
+import applicationConfigPath from './index.js'
 
 describe('application-config-path', function () {
   it('should return an absolute path', function () {

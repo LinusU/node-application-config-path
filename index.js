@@ -1,5 +1,5 @@
-var os = require('os')
-var path = require('path')
+import os from 'node:os'
+import path from 'node:path'
 
 function darwin (name) {
   return path.join(process.env.HOME, 'Library', 'Application Support', name)
@@ -21,7 +21,7 @@ function win32 (name) {
   return path.join(process.env.USERPROFILE, 'Local Settings', 'Application Data', name)
 }
 
-function applicationConfigPath (name) {
+export default function applicationConfigPath (name) {
   if (typeof name !== 'string') {
     throw new TypeError('`name` must be string')
   }
@@ -36,5 +36,3 @@ function applicationConfigPath (name) {
 
   throw new Error('Platform not supported')
 }
-
-module.exports = applicationConfigPath

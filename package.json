@@ -3,16 +3,17 @@
   "version": "0.1.1",
   "license": "MIT",
   "author": "Linus Unnebäck <linus@folkdatorn.se>",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/LinusU/node-application-config-path.git"
-  },
-  "devDependencies": {
-    "mocha": "^2.2.5",
-    "standard": "^5.0.1-0"
-  },
+  "repository": "LinusU/node-application-config-path",
+  "type": "module",
+  "exports": "./index.js",
   "scripts": {
     "test": "standard && mocha"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "standard": "^17.0.0"
+  },
+  "engines": {
+    "node": "^14.18.0 || ^16.14.0 || >=18.0.0"
   }
 }
